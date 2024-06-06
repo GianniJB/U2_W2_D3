@@ -1,38 +1,59 @@
 @import "./partials/reset";
+@import "./partials/font";
 @import "./partials/colors";
+@import "./partials/buttons";
 @import "./partials/spacing";
-@import "./partials/mixins";
+@import "./partials/mixin";
 
-/* GENERALE */
-body {
-    font-family: 'Courier New', Courier, monospace;
-
-}
+/* GENERALI */
 
 header {
+    background-color: #000000;
     display: flex;
-    width: 100vw;
-    background-color: $main-color;
-    img {
-        border-radius: 50%;
-        padding: 5px;
-    }
 }
 
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     width: 100%;
-    div a {
-        text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        li {
+            list-style: none;
+            display: inline-block;
+            a {
+                text-decoration: none;
+                color: $txt-color-1;
+                font: 600;
+            }
+        }
     }
 }
 
 .hero {
-    background-color: $sec-color;
+    display: flex;
+    background-color: $bg_hero;
+    color: $txt-color-1;
+    .hero_side1 {
+        width: 50%;
+        h1 {
+            @include title_big;
+        }
+    }
+    .hero_side2{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            max-width:90%;
+        }    
+    }
 }
 
-button {
-    @include btnLight($main-color)
+section {
+    display: flex;
 }

@@ -1,0 +1,11 @@
+*{
+    font-family: "Roboto", sans-serif;;
+}
+
+@mixin title_big() {
+    font-family: "Kanit", sans-serif;
+    display: inline-block;
+    color: $txt-color-1;
+    font-weight: bold;
+    font-size: 2rem;
+}

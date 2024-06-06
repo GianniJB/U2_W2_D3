@@ -1,0 +1,17 @@
+$btnColors: (
+    btn-color-1: #0e6cff,
+    btn-color-2: #ff8700,
+    btn-color-3: #4caf50,
+);
+
+/* GENERA BOTTONI IN BASE AI 3 COLORI */
+@each $key, $value in $btnColors {
+    .#{$key} {
+      background-color: $value;
+      color: scale-color($value, $lightness: -80%);
+      padding: 5px;
+      border-radius: 10px;
+      border: 2px solid scale-color($value, $lightness: -70%);
+      cursor: pointer;
+    }
+}
